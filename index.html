@@ -198,7 +198,7 @@
       <div class="seg" id="themeSeg"><button data-v="auto" class="sel">Auto</button><button data-v="light">Light</button><button data-v="dark">Dark</button></div></div>
     <div class="grid2">
       <div class="field"><label>Language (for voice)</label>
-        <div class="seg" id="langSeg"><button data-v="auto">Auto</button><button data-v="en">EN</button><button data-v="fr" class="sel">FR</button></div></div>
+        <div class="seg" id="langSeg"><button data-v="auto">Auto</button><button data-v="en" class="sel">EN</button><button data-v="fr">FR</button></div></div>
       <div class="field"><label>Voice (reads aloud)</label>
         <div class="seg" id="ttsSeg"><button data-v="off">Off</button><button data-v="on" class="sel">On</button></div></div>
     </div>
@@ -481,7 +481,7 @@
 
   /* player */
   var phrases=[],groups=[],groupOf=[],idx=0,wpm=300,playing=false,timer=null;
-  var lang='fr',ttsOn=true,currentLang='en';
+  var lang='en',ttsOn=true,currentLang='en';
   var playMode='continue', playBoundIdx=0; // playMode 'single' = play current sentence only, then stop
   var hasTTS=('speechSynthesis' in window);
   if(hasTTS){ loadVoices(); try{ window.speechSynthesis.onvoiceschanged=loadVoices; }catch(e){} }
